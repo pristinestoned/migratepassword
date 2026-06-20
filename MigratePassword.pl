@@ -6,6 +6,11 @@
 
 use strict;
 
+if ($> != 0) {
+   print "\n$0 must be run as root.\n\n";
+   exit 0;
+}
+
 my $pwdfile="/etc/passwd";
 my $workpassfile="./workpasswd";
 my @shadfile=`cat /etc/shadow`;
