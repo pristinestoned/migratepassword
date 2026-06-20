@@ -26,7 +26,7 @@ while(my $line=<INFO>) {
    if ($line =~ /\/bin\/bash/) {
       print "Printing hash for: ".$users[0]."\n";
       
-      foreach my $passline(@shadfile) {
+     foreach my $passline(@shadfile) {
          #print $_;
 	 my @passhash = split(/:/,$passline); 
 	 if($passline =~ /$users[0]/) {
